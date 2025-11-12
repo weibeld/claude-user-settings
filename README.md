@@ -15,7 +15,7 @@ This repository is supposed to be used as a [bare repository](https://git-scm.co
 Clone the repo as a bare repository anywhere on your system:
 
 ```bash
-git clone --bare https://github.com/weibeld/claude-settings
+git clone --bare https://github.com/weibeld/claude-user-settings
 ```
 
 ### 2. Check out files
@@ -23,7 +23,7 @@ git clone --bare https://github.com/weibeld/claude-settings
 Check out the files in the repo to `$HOME/.claude`:
 
 ```bash
-cd claude-settings
+cd claude-user-settings.git
 git --work-tree ~/.claude checkout
 ```
 
@@ -34,7 +34,7 @@ git --work-tree ~/.claude checkout
 Track your local changes to the files in the repository and push them back to GitHub. For example:
 
 ```bash
-cd claude-settings
+cd claude-user-settings.git
 git --work-tree ~/.claude status
 git --work-tree ~/.claude add settings.json
 git --work-tree ~/.claude commit
@@ -55,23 +55,23 @@ Alternatively, you can also define an alias:
 alias gitclaude='git --work-tree ~/.claude'
 ```
 
-You may additionally set `GIT_DIR` and [`--git-dir`](https://git-scm.com/docs/git#Documentation/git.txt---git-dirpath) to the repository directory to avoid the need to execute the commands from within the repository directory. For example, if you cloned the repository to `~/claude-settings`:
+You may additionally set `GIT_DIR` and [`--git-dir`](https://git-scm.com/docs/git#Documentation/git.txt---git-dirpath) to the repository directory to avoid the need to execute the commands from within the repository directory. For example, if you cloned the repository to `~/claude-user-settings.git`:
 
 ```bash
-git --work-tree ~/.claude --git-dir ~/claude-settings status
+git --work-tree ~/.claude --git-dir ~/claude-user-settings.git status
 ```
 
 If using an alias:
 
 ``` bash
-alias gitclaude='git --work-tree ~/.claude --git-dir ~/claude-settings'
+alias gitclaude='git --work-tree ~/.claude --git-dir ~/claude-user-settings.git'
 ```
 
 Or if using environment variables:
 
 ```bash
 export GIT_WORK_TREE=~/.claude
-export GIT_DIR=~/claude-settings
+export GIT_DIR=~/claude-user-settings.git
 ```
 
 You can then execute the commands from anywhere on the file system.
