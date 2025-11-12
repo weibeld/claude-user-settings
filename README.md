@@ -75,3 +75,8 @@ export GIT_DIR=~/claude-user-settings.git
 ```
 
 You can then execute the commands from anywhere on the file system.
+
+## References
+
+- [Claude Code Settings](https://code.claude.com/docs/en/settings)
+- [Status Line Configuration](https://code.claude.com/docs/en/statusline)
