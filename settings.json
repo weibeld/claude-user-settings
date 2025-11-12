@@ -1,7 +1,7 @@
 {
   "statusLine": {
     "type": "command",
-    "command": "bash -c 'input=$(cat); model=$(echo \"$input\" | jq -r \".model.display_name\"); cwd=$(echo \"$input\" | jq -r \".workspace.current_dir\"); if git -C \"$cwd\" rev-parse --git-dir > /dev/null 2>&1; then branch=$(git -C \"$cwd\" -c core.useReplaceRefs=false -c gc.auto=0 branch --show-current 2>/dev/null); if [ -z \"$branch\" ]; then branch=\"(detached)\"; fi; git_info=\" 🐙 [$branch]\"; else git_info=\"\"; fi; printf \"\\033[48;5;214m\\033[30m Claude: 🧠 [%s] 📁 [%s]%s \\033[0m\" \"$model\" \"$(echo $cwd | sed \"s#$HOME#~#\")\" \"$git_info\"'"
+    "command": "bash ~/.claude/statusline-command.sh"
   },
   "alwaysThinkingEnabled": false
 }
