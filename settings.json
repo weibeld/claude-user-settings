@@ -3,5 +3,9 @@
     "mode": "replace",
     "verbs": ["Thinking"]
   },
-  "spinnerTipsEnabled": false
+  "spinnerTipsEnabled": false,
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); echo \"$(echo \"$input\" | jq -r '.workspace.current_dir') | $(echo \"$input\" | jq -r '.session_id' | cut -c1-8)\""
+  }
 }
